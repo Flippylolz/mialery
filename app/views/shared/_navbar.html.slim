@@ -1,0 +1,21 @@
+nav.navbar.navbar-inverse.navbar-fixed-top role="navigation"
+  .container
+    .navbar-header
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+      = link_to root_url, class: 'navbar-brand' do
+        = image_tag 'logo_with_text.png', class: 'logo'
+    #navbar.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        -if current_user
+          li
+            = link_to 'Albums', albums_url
+      nav.navbar-nav.navbar-right
+        a href='#'
+          = user_signed_in? ? current_user.display_name : 'Log in'
+          /TODO: tyt nado ssilky na loginky, no bydet tak(vremenno)
+          -if current_user
+            = link_to 'Profile', edit_user_registration_path
+            /TODO: Clear stub above
+            = link_to 'Log out', destroy_user_session_path, method: :delete
