@@ -1,7 +1,7 @@
-= form_for @album do |f|
+= form_for @album, html: { multipart: true }  do |f|
   - if @album.errors.any?
     #error_explanation
-      h2 = "#{pluralize(@album.errors.count, "error")} prohibited this album from being saved:"
+      h2 = "#{pluralize(@album.errors.count, 'error')} prohibited this album from being saved:"
       ul
         - @album.errors.full_messages.each do |message|
           li = message
@@ -9,4 +9,8 @@
   .field
     = f.label :name
     = f.text_field :name
+
+  = f.fields_for :photos do |ff|
+    = ff.file_field :image
+
   .actions = f.submit

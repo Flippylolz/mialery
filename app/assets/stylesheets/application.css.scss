@@ -18,11 +18,38 @@
 @import "variables";
 
 body {
-  background-color: rgb(239,230,221);
-  .logo{
+  background-color: rgb(239, 230, 221);
+  .logo {
     height: $logo-size;
   }
-  .preview-picture{
+  .img-preview {
     width: 100%
+  }
+  .block-small {
+    overflow: hidden;
+    height: 190px;
+    img { display: block; }
+  }
+  #box {
+    box-shadow: inset 1px 1px 40px 0 rgba(0, 0, 0, .45);
+    //background: 'default_image.png'; TODO: Add image with text 'ADD Photo'
+  }
+
+  #overlay {
+    background: rgba(0, 0, 0, .75);
+    text-align: center;
+    padding: 26px 0;
+    opacity: 0;
+    -webkit-transition: opacity .25s ease;
+  }
+
+  #box:hover #overlay {
+    opacity: 1;
+  }
+
+  #plus {
+    font-weight: 900;
+    color: rgba(255, 255, 255, .85);
+    font-size: 96px;
   }
 }

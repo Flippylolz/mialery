@@ -7,6 +7,7 @@ end
 
 gem 'best_in_place', '~> 3.1', '>= 3.1.1'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'carrierwave', '~> 1.1'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'jbuilder', '~> 2.5'

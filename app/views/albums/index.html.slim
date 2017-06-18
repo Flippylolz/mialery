@@ -3,28 +3,13 @@ h1.text-center Listing albums
 .row
   - @albums.each do |album|
     .col-xs-3
-      = link_to album
-        / TODO: carrierwave
-        = image_tag 'template/1.jpg', class: 'img img-responsive preview-picture'
-        .text-center = album.name
-
-br = link_to 'New Album', new_album_path
-
-//OLD
-
-/table
-/  thead
-/    tr
-/      th Name
-/      th
-/      th
-/      th
-/
-/  tbody
-/    - @albums.each do |album|
-/      tr
-/        td = album.name
-/        td = link_to 'Show', album
-/        td = link_to 'Edit', edit_album_path(album)
-/        td = link_to 'Destroy', album, data: { confirm: 'Are you sure?' }, method: :delete
-
+      .block-small
+        = link_to album
+          = image_tag (album.photos.first.image_url rescue 'default_image.png'), class: 'img img-responsive img-preview'
+      .text-center = album.name
+  .col-xs-3
+    .block-small
+      = link_to new_album_path
+        #box
+          #overlay
+            span#plus +

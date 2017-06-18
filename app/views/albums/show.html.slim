@@ -1,14 +1,12 @@
-p#notice = notice
-
-p
-  strong Name:
-  /= @album.name
+h2.text-center.text-capitalize
   = best_in_place @album, :name
 
-= link_to 'Photos', album_photos_path(@album)
-
-/= link_to 'Edit', edit_album_path(@album)
-/ TODO: replace with best_in_place
+.row
+  - @album.photos.each do |photo|
+    .col-xs-2
+      = link_to photo.image_url, target: '_blank'
+        = image_tag photo.image_url, class: 'img-responsive'
 
 = link_to 'Back', albums_path
+= link_to 'Add photo', edit_album_path(@album)
 
