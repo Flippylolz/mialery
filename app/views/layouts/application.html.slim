@@ -9,7 +9,7 @@ html
   body class="#{controller_name} #{action_name}"
     == render 'shared/navbar'
     /.modal.fade.mymodalfade{ tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" }
-    .content
+    .container
       - flash.each do |name, msg|
         = content_tag :div, class: "alert alert-#{ name == :error ? 'danger' : 'success' } alert-dismissable", role: 'alert' do
           button.close type='button' data-dismiss='alert'

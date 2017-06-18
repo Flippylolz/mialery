@@ -1,21 +1,30 @@
-h1 Listing albums
+h1.text-center Listing albums
 
-table
-  thead
-    tr
-      th Name
-      th
-      th
-      th
+.row
+  - @albums.each do |album|
+    .col-xs-3
+      = link_to album
+        / TODO: carrierwave
+        = image_tag 'template/1.jpg', class: 'img img-responsive preview-picture'
+        .text-center = album.name
 
-  tbody
-    - @albums.each do |album|
-      tr
-        td = album.name
-        td = link_to 'Show', album
-        td = link_to 'Edit', edit_album_path(album)
-        td = link_to 'Destroy', album, data: { confirm: 'Are you sure?' }, method: :delete
+br = link_to 'New Album', new_album_path
 
-br
+//OLD
 
-= link_to 'New Album', new_album_path
+/table
+/  thead
+/    tr
+/      th Name
+/      th
+/      th
+/      th
+/
+/  tbody
+/    - @albums.each do |album|
+/      tr
+/        td = album.name
+/        td = link_to 'Show', album
+/        td = link_to 'Edit', edit_album_path(album)
+/        td = link_to 'Destroy', album, data: { confirm: 'Are you sure?' }, method: :delete
+

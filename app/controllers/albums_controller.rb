@@ -30,6 +30,7 @@ class AlbumsController < ApplicationController
     respond_to do |format|
       if @album.update(album_params)
         format.html { redirect_to @album, notice: 'Album was successfully updated.' }
+        format.json
       else
         format.html { render :edit }
       end

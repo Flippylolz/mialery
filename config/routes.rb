@@ -9,5 +9,5 @@ Rails.application.routes.draw do
     resources :photos
   end
 
-  get '*unmatched_route', to: 'application#render_404'
+  get '*unmatched_route', to: 'application#render_404' unless Rails.env.development?
 end

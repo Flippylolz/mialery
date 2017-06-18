@@ -15,7 +15,14 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "variables";
 
 body {
-  background: url("http://www.antica.su/sites/default/files/newcollect/nanocolor/zatirka/zapolnitel-shovnyj-nanocolor-16-svetlo-kremovyj-2kg-1-74.jpg");
+  background-color: rgb(239,230,221);
+  .logo{
+    height: $logo-size;
+  }
+  .preview-picture{
+    width: 100%
+  }
 }
