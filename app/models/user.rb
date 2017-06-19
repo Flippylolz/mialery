@@ -5,8 +5,7 @@ class User < ApplicationRecord
   has_many :albums
   accepts_nested_attributes_for :albums, allow_destroy: true
 
-  validates_presence_of :email, :password
-  validates_length_of :password, in: 6..20
+  validates_presence_of :email
   validates_uniqueness_of :email, :username
 
   def display_name
