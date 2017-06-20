@@ -3,7 +3,7 @@ class AlbumsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @albums = current_user.albums.all
+    @albums = current_user.albums.order('id DESC').page(params[:page] || 1)
   end
 
   def show; end

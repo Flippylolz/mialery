@@ -1,15 +1,10 @@
 h1.text-center Listing albums
 
-.row
-  - @albums.each do |album|
-    .col-xs-3
-      .block-small
-        = link_to album
-          = image_tag (album.photos.first.image_url rescue 'default_image.png'), class: 'img img-responsive img-preview'
-      .text-center = album.name
+== render 'album'
   .col-xs-3
     .block-small
       = link_to new_album_path
         #box.new-album
           #overlay
             span#plus +
+.row#paginator = paginate @albums, remote: true
