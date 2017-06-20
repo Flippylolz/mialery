@@ -9,6 +9,7 @@ nav.navbar.navbar-default
           li = link_to 'Gallery', albums_path
       ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
+          li = image_tag current_user.image_url, class: 'img img-responsive profile-photo'
           li = link_to current_user.display_name , profile_url
           li = link_to 'Log out', destroy_user_session_path, method: :delete
         - else
