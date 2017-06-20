@@ -1,6 +1,7 @@
 h1.text-center Listing albums
-
-== render 'album'
+.row#albums
+  - @albums.each do |album|
+    == render 'album', album: album
   .col-xs-3
     .block-small
       = link_to new_album_path
