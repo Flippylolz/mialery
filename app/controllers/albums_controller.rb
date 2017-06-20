@@ -6,7 +6,9 @@ class AlbumsController < ApplicationController
     @albums = current_user.albums.order('id DESC').page(params[:page] || 1)
   end
 
-  def show; end
+  def show
+    @photos = @album.photos.order('id DESC').page(params[:page] || 1)
+  end
 
   def new
     @album = current_user.albums.new

@@ -1,20 +1,18 @@
 h2.text-center.text-capitalize
   = best_in_place @album, :name
 
-.row
-  - @album.photos.each do |photo|
-    .col-xs-3
-      = link_to photo.image_url, target: '_blank'
-        = image_tag photo.image_url, class: 'img-responsive'
-      br
+.row#photos
+  - @photos.each do |photo|
+    == render 'photo', photo: photo
 
   .col-xs-3
     .block-small
       #box.new-photo
         #overlay
           #plus +
-
+/ Upload button
 = form_for(@album, html: {multipart: true}) do |f|
   = f.fields_for :photos, @album.photos.build do |ff|
     = ff.file_field :image
   = f.submit
+.row#paginator = paginate @photos, remote: true
