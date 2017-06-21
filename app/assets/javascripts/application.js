@@ -14,6 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require best_in_place
+//= require social-share-button
 //= require_tree .
 
 $(document).ready(function() {

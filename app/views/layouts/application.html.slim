@@ -17,5 +17,7 @@ html
           = msg
       - unless controller_name == 'home'
         = link_to 'Back', :back, class: 'btn btn-info btn-xs' rescue redirect_to root_url
-
+      /TODO: fix this kostil
+      - if controller_name == 'albums' && action_name == 'show'
+        = link_to 'Edit', edit_album_path, class: 'btn btn-warning btn-xs'
       = yield

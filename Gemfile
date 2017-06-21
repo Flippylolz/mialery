@@ -18,6 +18,7 @@ gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.1'
 gem 'sass-rails', '~> 5.0'
 gem 'slim-rails'
+gem 'social-share-button', '~> 0.10.0'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
