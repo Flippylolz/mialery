@@ -4,9 +4,8 @@
       = image_tag photo.image_url
     .image-details
       .details
-        /TODO: opisanie fotok
-        h4 Opisanie
-        p Kotorogo net:(
+        h4 Description:
+        p = photo.description.empty? ? 'No decription provided' : photo.description
         = link_to 'Full Size Photo', photo.image_url, target: '_blank', class: 'btn btn-default'
   .clear
 
