@@ -46,6 +46,11 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def short_link
+    @short_url = Album.shortener(album_url(params[:album_id]))
+    respond_to :js
+  end
+
   private
 
   def set_album

@@ -20,4 +20,5 @@ html
       /TODO: fix this kostil
       - if controller_name == 'albums' && action_name == 'show'
         = link_to 'Edit', edit_album_path, class: 'btn btn-warning btn-xs'
+      == render 'shared/modal'
       = yield

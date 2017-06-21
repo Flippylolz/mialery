@@ -14,6 +14,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require best_in_place
+//= require bootstrap
+//= require bootstrap/modal
 //= require social-share-button
 //= require_tree .
 

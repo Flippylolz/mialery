@@ -2,4 +2,9 @@
   .block-small
     = link_to album
       = image_tag (album.photos.first.image_url rescue 'default_image.png'), class: 'img img-responsive img-preview'
-  .text-center = album.name
+  .row
+    .col-xs-10
+      = album.name
+    .col-xs-2.text-right
+      = link_to short_link_url(album_id: album.id), remote: true, 'data-toggle': 'modal', 'data-target': '#myModal'
+        i.glyphicon.glyphicon-share

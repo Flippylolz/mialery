@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'profile', to: 'users/registrations#show'
   end
-  resources :albums do
-    # resources :photos
-  end
+  resources :albums
+
+  get 'short_link', to: 'albums#short_link'
 
   get '*unmatched_route', to: 'application#render_404' unless Rails.env.development?
 end
