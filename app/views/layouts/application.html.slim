@@ -8,7 +8,6 @@ html
     = csrf_meta_tags
   body class="#{controller_name} #{action_name}"
     == render 'shared/navbar'
-    /.modal.fade.mymodalfade{ tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" }
     .container
       - flash.each do |name, msg|
         = content_tag :div, class: "alert alert-#{ name == :error ? 'danger' : 'success' } alert-dismissable", role: 'alert' do
@@ -16,4 +15,7 @@ html
             span aria-hidden='true' &times;
             span.sr-only Close
           = msg
+      - unless controller_name == 'home'
+        = link_to 'Back', :back, class: 'btn btn-info btn-xs' rescue redirect_to root_url
+
       = yield

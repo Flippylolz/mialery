@@ -1,4 +1,17 @@
-.col-xs-3#photos
-  = link_to photo.image_url, target: '_blank'
-    = image_tag photo.image_url, class: 'img-responsive'
-  br
+#image-box-wrapper.image-box-wrapper
+  .image-box
+    .image-container
+      = image_tag photo.image_url
+    .image-details
+      .details
+        /TODO: opisanie fotok
+        h4 Opisanie
+        p Kotorogo net:(
+        = link_to 'Full Size Photo', photo.image_url, target: '_blank', class: 'btn btn-default'
+  .clear
+
+
+/.col-xs-3#photos
+/  = link_to photo.image_url, target: '_blank'
+/    = image_tag photo.image_url, class: 'img-responsive'
+/  br
