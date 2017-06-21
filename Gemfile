@@ -8,6 +8,7 @@ end
 gem 'best_in_place', '~> 3.1', '>= 3.1.1'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'carrierwave', '~> 1.1'
+gem 'cocoon', '~> 1.2', '>= 1.2.10'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'google_url_shortener', '~> 1.1'

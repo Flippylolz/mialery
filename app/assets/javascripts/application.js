@@ -16,6 +16,7 @@
 //= require best_in_place
 //= require bootstrap
 //= require bootstrap/modal
+//= require cocoon
 //= require social-share-button
 //= require_tree .
 
