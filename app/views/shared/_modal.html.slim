@@ -1,10 +1,10 @@
-#myModal.modal.fade role="dialog"
-  .modal-dialog
-    .modal-content
-      .modal-header
-        button.close data-dismiss="modal" type="button"  ×
-        h4.modal-title Modal Header
-      .modal-body
-        #shortened_url
-      .modal-footer
-        button.btn.btn-default data-dismiss="modal" type="button"  Close
+.modal-with-link.modal-dialog[role="document"]
+  .modal-content
+    .modal-header.text-center
+      button.close[type="button" data-dismiss="modal" aria-label="Close"]
+        span[aria-hidden="true"]
+          | ×
+      h4#gridSystemModalLabel.modal-title
+        | Shortened link to this album
+    .modal-body
+      #shortened_url

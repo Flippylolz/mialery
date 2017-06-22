@@ -1,1 +1,7 @@
-alert(`<%= @short_url %>`)
+if ($(".modal-with-link").empty()){
+  $("#label").append('<%= j render 'shared/modal' %>');
+}
+else{
+  $(".modal-with-link").replace('<%= j render 'shared/modal' %>');
+}
+$("#shortened_url").html(`<%= link_to @short_url, @short_url %>`)

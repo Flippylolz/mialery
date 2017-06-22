@@ -17,5 +17,4 @@ html
           = msg
       - unless controller_name == 'home'
         = link_to 'Back', :back, class: 'btn btn-info btn-xs' rescue redirect_to root_url
-      == render 'shared/modal'
       = yield
