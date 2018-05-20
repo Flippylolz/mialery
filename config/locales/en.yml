@@ -1,5 +1,6 @@
 en:
   hello: "Hello world"
+  log_in: "Log in"
   errors:
     messages:
       carrierwave_processing_error: failed to be processed

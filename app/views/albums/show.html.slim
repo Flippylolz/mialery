@@ -13,7 +13,7 @@ h2.text-center.text-capitalize
         .details
           = form_for(@album, html: {multipart: true}) do |f|
             = f.fields_for :photos, @album.photos.build do |ff|
-              = ff.file_field :image
+              = ff.file_field :image, required: ''
             = f.submit
     .clear
 
