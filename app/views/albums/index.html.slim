@@ -3,7 +3,7 @@ h1.text-center#label Listing albums
   - @albums.each do |album|
     == render 'album', album: album
   .col-xs-3
-    .block-small
+    .block-large
       = link_to new_album_path
         #box.new-album
           #overlay
